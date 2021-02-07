@@ -1,8 +1,9 @@
-<p>
-  郵便番号:
-  <input type="text" maxlength="3" size="3" />
-  -
-  <input type="text" maxlength="4" size="4" />
-  &nbsp;
-  <button>検索</button>
-</p>
+
+<div>
+  <label>郵便番号:
+    <input maxlength="3" size="3" [(ngModel)]="postcode.postcode1" placeholder="postcode1"(input)="onChange(postcode.postcode1,postcode.postcode2)"/>
+    -
+    <input maxlength="4" size="4"[(ngModel)]="postcode.postcode2" placeholder="postcode2"  (input)="onChange(postcode.postcode1,postcode.postcode2)"/>
+  </label>
+  <button (click)="onClick(postcode.postcode1,postcode.postcode2)"[disabled]="isDisable">検索</button>
+</div>
