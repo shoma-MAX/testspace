@@ -28,6 +28,10 @@ export class MessageComponent implements OnInit {
     } else {
       this.isDisable = true;
     }
+
+    if(postcode1.length==3){
+      document.getElementById("myTextField").focus();
+    }
   }
 
   async onClick(postcode1, postcode2) {
